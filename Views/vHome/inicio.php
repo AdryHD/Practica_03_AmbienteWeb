@@ -1,5 +1,5 @@
 <?php
-include_once $_SERVER["DOCUMENT_ROOT"] . "/Practica03/Views/layout.php";
+include_once $_SERVER["DOCUMENT_ROOT"] . "/Practica_03/Views/layout.php";
 ?>
 
 <!DOCTYPE html>
