@@ -5,7 +5,8 @@ function ConsultarComprasModel()
 {
     try
     {
-        $context = OpenDatabase();
+
+        $context = UtilitarioModel::OpenDatabase();
 
         $sp = "CALL sp_ConsultarCompras()";
         $result = $context->query($sp);
@@ -16,7 +17,7 @@ function ConsultarComprasModel()
             $datos[] = $fila;
         }
 
-        CloseDatabase($context);
+        UtilitarioModel::CloseDatabase($context);
         return $datos;
     }
     catch (Exception $e)
@@ -29,7 +30,8 @@ function ConsultarComprasPendientesModel()
 {
     try
     {
-        $context = OpenDatabase();
+
+        $context = UtilitarioModel::OpenDatabase();
 
         $sp = "CALL sp_ConsultarComprasPendientes()";
         $result = $context->query($sp);
@@ -40,7 +42,8 @@ function ConsultarComprasPendientesModel()
             $datos[] = $fila;
         }
 
-        CloseDatabase($context);
+
+        UtilitarioModel::CloseDatabase($context);
         return $datos;
     }
     catch (Exception $e)
@@ -53,7 +56,8 @@ function ConsultarSaldoCompraModel($idCompra)
 {
     try
     {
-        $context = OpenDatabase();
+
+        $context = UtilitarioModel::OpenDatabase();
 
         $sp = "CALL sp_ConsultarSaldoCompra('$idCompra')";
         $result = $context->query($sp);
@@ -64,7 +68,7 @@ function ConsultarSaldoCompraModel($idCompra)
             $datos = $fila;
         }
 
-        CloseDatabase($context);
+        UtilitarioModel::CloseDatabase($context);
         return $datos;
     }
     catch (Exception $e)

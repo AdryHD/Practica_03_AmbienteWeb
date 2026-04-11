@@ -5,12 +5,13 @@ function RegistrarAbonoModel($idCompra, $monto, $fecha)
 {
     try
     {
-        $context = OpenDatabase();
+
+        $context = UtilitarioModel::OpenDatabase();
 
         $sp = "CALL sp_RegistrarAbono('$idCompra', '$monto', '$fecha')";
         $result = $context->query($sp);
 
-        CloseDatabase($context);
+        UtilitarioModel::CloseDatabase($context);
         return $result;
     }
     catch (Exception $e)

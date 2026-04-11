@@ -1,3 +1,4 @@
+Inicio:
 <?php
 include_once $_SERVER["DOCUMENT_ROOT"] . "/Practica_03/Views/layout.php";
 ?>
@@ -34,7 +35,7 @@ include_once $_SERVER["DOCUMENT_ROOT"] . "/Practica_03/Views/layout.php";
                     <div class="row g-4 justify-content-center">
 
                         <div class="col-sm-6 col-md-4">
-                            <a href="Views/vConsulta/consultarCompras.php" class="text-decoration-none">
+                            <a href="/Practica_03/Views/vConsulta/ConsultarCompras.php" class="text-decoration-none">
                                 <div class="card h-100 shadow-sm text-center p-4">
                                     <div class="card-body d-flex flex-column align-items-center justify-content-center">
                                         <i class="fas fa-list fa-3x text-primary mb-3"></i>
@@ -46,7 +47,7 @@ include_once $_SERVER["DOCUMENT_ROOT"] . "/Practica_03/Views/layout.php";
                         </div>
 
                         <div class="col-sm-6 col-md-4">
-                            <a href="Views/vRegistro/registrarAbono.php" class="text-decoration-none">
+                            <a href="/Practica_03/Views/vRegistro/registrarAbono.php" class="text-decoration-none">
                                 <div class="card h-100 shadow-sm text-center p-4">
                                     <div class="card-body d-flex flex-column align-items-center justify-content-center">
                                         <i class="fas fa-plus-circle fa-3x text-success mb-3"></i>
